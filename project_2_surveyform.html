@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="utf-8">
+    <title >CodeForum | Survey Form</title>
+<style>
+    
+    
+    body{
+      
+      
+      background-image: url(https://i.imgur.com/gaZxVTJ.jpg);
+      
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+
+      font-family: 'Barlow', sans-serif;
+      color: white;
+      font-weight: 300;
+      font-size: 20px;
+
+      z-index: 2;
+
+    }
+    .bg-overlay{
+      /* background:  rgba(108, 60, 196, 0.5) ; purple bg version*/
+      background:  rgba(112, 76, 29, 0.5) ;
+      width: 100%;
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+    }
+    
+    header{
+
+      margin-top: 50px;
+      z-index: 2;
+    }
+
+    h1{
+      font-weight: 500;
+      font-size: 50px;
+      text-align: center;
+    }
+
+    header p{
+      font-weight: 400;
+      text-align: center;
+
+    }
+
+    #survey-form{
+      
+      margin-top: 100px;
+      margin: auto;
+      
+      width: 80vw;
+      /* background: rgba(18, 13, 65, 0.9); purple bg version */
+      background: rgba(116, 38, 2, 0.8);
+      padding:10px 30px 10px 30px;
+      border-radius: 5px;
+      
+    }
+    
+    input{
+      background:   rgba(255,255,255,0.5);
+      color: white;
+      
+      
+    }
+    
+    #survey-form .box{
+      min-width: 200px;
+    }
+
+    #survey-form select{
+      background:   rgba(255,255,255,0.5);
+    }
+    
+    #survey-form #comment{
+      min-width: 400px;
+      min-height: 100px;
+    }
+
+    input:invalid:required {
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    input:valid {
+      background:  rgba(255,255,255,0.5);
+    }
+
+    #survey-form #submit{
+      width: 200px;
+      background:#19A637;
+      font-family: 'Barlow', sans-serif;
+      color: white;
+      font-weight: 500;
+      font-size: 20px;
+
+    }
+    
+
+  
+  
+</style>
+
+</head>
+<div class="bg-overlay">
+<header>
+  
+<body>
+
+
+<h1 id="title">CodeForum Survey Form</h1>
+<p id="description">We would like to know more about our members! <br>
+  Appreciate for filling the survey form using 1 minute!</p>
+</header>
+
+<form id="survey-form" action="infostore.url">
+<p>
+    <label for id="name-label">Your Name / Nickname *</label><br>
+    <input id="name" class="box" name="name" type="text" required placeholder="your name">
+</p>
+<br>
+<p>
+    <label for id="email-label">Email *</label><br>
+    <input id="email" class="box" name="email" type="email" required placeholder="e.g. somebody@abc.com">
+</p>
+<br>
+<p>
+    <label for="number-label">4-digit member id *</label><br>
+    <input id="number" class="box" name="number" type="number" 
+    min="1000" max="9999" required placeholder="e.g.1234">
+</p>   
+<br>
+<p>  
+  <label for="skill-label">
+
+  Choose the programming skill level that best suits you *</label>
+</p>
+      <select name="skill" id="dropdown" required>
+        <option value="">Please select one</option>
+        <option value="1-no-knowledge">Near no knowledge</option>
+        <option value="2-begginer">Begginer</option>
+        <option value="3-some-knowledge">Some knowledge</option>
+        <option value="4-fit">fit for professional work in at least one field</option>
+        <option value="5-master">master in at least one field</option>
+        <option value="6-multi-master">master in multiple fields</option>
+        <option value="0-dunno">Don't know how to say</option>
+
+
+      </select>
+</p> 
+<br>
+
+<p>
+  <label for="edulv-label">
+    <p>
+    Choose your highest programming-related education level *</label>
+    </p>
+     <select name="edu-dropdown" id="edu-dropdown" required>
+
+      <option value="">Please select one</option>
+       <option value="1-dip">Diploma / Certificate</option>
+       <option value="2-ug">Undergraduate</option>
+       <option value="3-mas">Master</option>
+       <option value="4-phd">PhD</option>
+       <option value="5-postdoc">Post-Doc</option>
+       <option value="0-no">No formal education in the above list</option>
+      </select>
+  
+</p> 
+<br>
+ <p>
+<label for="course-typpe-label">Indicate what programming course(s) have you attended</label> <br>
+(you may choose multiple options)
+</p>
+<p>
+ <label for="type-ug">
+    <input id="type-ug"  name="type-of-course" type="checkbox" value="Undergraduate" >
+    Undergraduate Course</label>   
+  </p>
+<p>
+     <label for="type-postgrad">
+    <input id="type-postgrad"  name="type-of-course" type="checkbox" value="Post graduate">
+    Post graduate course (including Master and PhD)</label>  
+</p>
+    <p>  <label for="type-bootcamp">
+    <input id="type-bootcamp"  name="type-of-course" type="checkbox" value="bootcamp">
+    Bootcamp / Certificate Course</label> </p>
+
+    <p> <label for="type-online">
+    <input id="type-online"  name="type-of-course" type="checkbox" value="online course">
+    Online Courses (like Udemy, Coursera etc.)</label> </p>
+
+    <p>  <label for="type-privtut">
+    <input id="type-privtut"  name="type-of-course" type="checkbox" value="private tutorial">
+    Private tutorial under 5 students per class</label> </p>
+
+       
+    <br>
+<p>
+<label for="reason-lebel">
+  Indicate which is the most reason you visit this site * </label>
+</p>
+ <p>  <label for="reason-learn">
+  <input id="reason-learn"  name="visit-reason" type="radio" value="Learn programming">
+  Learn programming</label> </p>   
+
+  <p>  <label for="reason-share">
+    <input id="reason-share" required name="visit-reason" type="radio" value="share programming experience">
+    Share programming experience</label> </p>   
+
+<p>  <label for="reason-discuss">
+<input id="reason-discuss"  required name="visit-reason" type="radio" value= "Discuss with other programmers">
+ Discuss with other programmers</label> </p> 
+
+ <p>  <label for="reason-killtime">
+<input id="reason-killtime"  required name="visit-reason" type="radio" value= "Kill time">
+  To kill time</label> </p>
+
+<p>  <label for="reason-lovesite">
+<input id="reason-lovesite"  required name="visit-reason" type="radio" value= "just love site">
+I just love the site</label> 
+</p>
+
+<br>
+<p>
+  <label for="comment-label">Please share any thoughts about CodeForum!</label><br>
+  (max 500 characters)
+</p>
+
+<p>
+  <textarea id="comment" name="comment" row="10"  maxlength="500">
+    </textarea>
+
+</p>
+      
+  <p> <button id="submit">Submit</button></p>
+  </form>
+
+ 
+</div>
+</body>
+</div>
+</html>
