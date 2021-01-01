@@ -1,4 +1,4 @@
-# learning-html
+# Learning-html
 Here contains two of my exercises in learning html and CSS.
 Source of the exercises is from Responsive Web Design Course from Free Code Camp (https://www.freecodecamp.org).
 
